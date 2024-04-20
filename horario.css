@@ -384,7 +384,6 @@ footer img {
     right: 50%;
     width: 30rem;
     transform: translateX(50%);
- 
   }
 
   .horario-section h2, .revisa-section h2 {
@@ -392,11 +391,17 @@ footer img {
   }
 
   .revisa-section {
-    top: 65%;
+    top: 63%;
+    flex-direction: column;
+
+  }
+
+  .revisa-section h2 {
+    margin: 0;
   }
 
   .horario-section {
-    top: 18%;
+    top: 20%;
     width: 23rem;
     height: 31rem;
   }
@@ -455,6 +460,10 @@ footer img {
  
   }
 
+  .horario-section {
+    height: 30rem;
+  }
+
   .horario-section h2, .revisa-section h2 {
     font-size: 1.4rem;
     text-wrap: wrap;
@@ -481,7 +490,7 @@ footer img {
 
   .horario-section {
     top: 18%;
-    height: 57vh;
+    height: 43vh;
   }
 
   .alerta-container {
@@ -497,4 +506,9 @@ footer img {
   footer p {
     margin: 0.5rem;
   }
+
+  html, body {
+    overflow-y: visible;
+  }
+
 }
