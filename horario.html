@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Cevichón</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./horario.css">
+    <link rel="stylesheet" href="./backgroundHorario.css">
+</head>
+<body>
+    <div class="ocean">
+        <div class="bubbles">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <header>
+        <img class='logoImg' src="../" alt="" />
+        <h1 onclick="redirecToIndex()">Cevichón</h1>
+        <p class='eslogan'>Delicias del mar en cada bocado.</p>
+        <nav>
+            <a href="./carta">Carta</a>
+            <a href="./horario">Horario</a>
+            <a target="_blank" href="https://wa.me/+56963360528">Contactarnos</a>
+        </nav>
+    </header>
+
+    <section class="horario-section">
+        <h2>Nuestro Horario de Trabajo</h2>
+
+        <div class="horario-container">
+            <p>-Lunes a domingo</p>
+            <p>-Lunes desde 7am-8pm</p>
+            <p>-Lunes a domingo</p>
+            <p>-Lunes desde 7am-8pm</p>
+            <p>-Lunes a domingo</p>
+            <p>-Lunes desde 7am-8pm</p>
+        </div>
+    </section>
+
+    <section class="revisa-section">
+        <h2>¡Revisa si estamos atendiendo!</h2>
+        <button onclick="revisarHorarioDisponible()" class="boton-revisar">Revisar</button>
+    </section>
+
+    <div id="color-container" class="alerta-container">
+        <h2 class="alerta-texto">error</h2>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
