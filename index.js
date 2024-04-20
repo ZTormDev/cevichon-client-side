@@ -4,7 +4,7 @@ function products() {
 
 
 function redirecToIndex() {
-    window.location.href = "./"
+    window.location.href = "https://ztormdev.github.io/CEVICHON-MENU/"
 }
 
 
