@@ -156,3 +156,49 @@ nav {
     transform: translateY(0);
   }
 }
+
+@media only screen and (max-width: 900px) {
+  h1 {
+    font-size: 6rem;
+  }
+
+  .eslogan {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  .eslogan {
+    font-size: 1.2rem;
+    margin-top: -0.5rem;
+  }
+
+  a {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  h1 {
+    font-size: 3.5rem;
+    transform: translateX(-.3rem);
+  }
+
+  .eslogan {
+    font-size: 1rem;
+    margin-top: -0.5rem;
+    margin-bottom: 2rem;
+    transform: translateX(-.3rem);
+  }
+
+  a {
+    font-size: 1rem;
+    margin-inline: 0rem;
+    padding: .2rem .6rem;
+  }
+
+}

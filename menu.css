@@ -257,3 +257,121 @@ footer img {
 }
 
 
+@media only screen and (max-width: 1200px) {
+
+  article {
+    width: 12rem;
+    height: 15.5rem;
+  }
+
+  .productos-container {
+    gap: 2rem 0;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    width: 55rem;
+  }
+
+}
+
+@media only screen and (max-width: 900px) {
+
+  article {
+    width: 12rem;
+    height: 15.5rem;
+  }
+
+  .productos-container {
+    gap: 2rem 0;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    width: 40rem;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+}
+
+@media only screen and (max-width: 680px) {
+
+  article {
+    width: 12rem;
+    height: 15.5rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  .eslogan {
+    font-size: 1.4rem;
+  }
+
+  .productos-container {
+    gap: 2rem 0;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    width: 27rem;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 15rem;
+  }
+
+}
+
+@media only screen and (max-width: 460px) {
+
+  article {
+    width: 10rem;
+    height: 13rem;
+    padding: .8rem;
+    font-size: 1rem;
+  }
+
+  .product-details {
+    font-size: 1rem;
+  }
+
+  .product-details h2 {
+    font-size: 1.2rem;
+  }
+
+  .precioProducto {
+    font-size: 1.2rem;
+    padding: .2rem .6rem;
+    transform: translateY(-0.2rem);
+  }
+
+  .image-container {
+    border-radius: 1.5rem;
+    margin-bottom: .5rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .eslogan {
+    font-size: 1rem;
+    margin-top: -.5rem;
+  }
+
+  .productos-container {
+    gap: 2rem 0;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    width: 22rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  footer {
+    width: 21.5rem;
+  }
+  
+  nav a{
+    font-size: 1.2rem;
+    padding: .2rem .6rem;
+    margin-inline: .0rem;
+  }
+}

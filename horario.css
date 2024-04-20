@@ -279,3 +279,134 @@ footer img {
   width: 2.8rem;
 }
 
+@media only screen and (max-width: 1690px) {
+
+  footer {
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  header {
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .horario-section , .revisa-section {
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .horario-section {
+    top: 27%;
+  }
+
+  .alerta-container {
+    right: auto;
+    left: auto;
+  }
+}
+
+@media only screen and (max-width: 790px) {
+
+  footer {
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  header {
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .horario-section , .revisa-section {
+    right: 50%;
+    width: 30rem;
+    transform: translateX(50%);
+ 
+  }
+
+  .horario-section h2, .revisa-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .horario-section {
+    top: 27%;
+    
+  }
+
+  .alerta-container {
+    right: auto;
+    left: auto;
+    width: 30rem;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .eslogan {
+    font-size: 1.2rem;
+    margin-top: -.5rem;
+    margin-bottom: 2rem;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  header a {
+    font-size: 1.2rem;
+    padding: .2 .6rem;
+    margin-inline: 0;
+  }
+
+  footer {
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  header {
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .horario-section , .revisa-section {
+    right: 50%;
+    width: 30rem;
+    transform: translateX(50%);
+ 
+  }
+
+  .horario-section h2, .revisa-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .revisa-section {
+    top: 65%;
+  }
+
+  .horario-section {
+    top: 18%;
+    width: 25rem;
+    height: 31rem;
+  }
+
+  .alerta-container {
+    right: auto;
+    left: auto;
+    width: 30rem;
+    font-size: 1rem;
+    width: 20rem;
+    padding: .8rem;
+  }
+}
