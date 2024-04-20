@@ -436,7 +436,7 @@ footer img {
   footer {
     bottom: 1rem;
     width: 20rem;
-    height: 8rem;
+    height: 7rem;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -475,9 +475,13 @@ footer img {
     gap: .5rem;
   }
 
+  .horario-section p {
+    font-size: 1rem;
+  }
+
   .horario-section {
     top: 18%;
-    height: 32rem;
+    height: 57vh;
   }
 
   .alerta-container {
@@ -487,5 +491,10 @@ footer img {
     font-size: 1rem;
     width: 20rem;
     padding: .8rem;
+    z-index: 999;
+  }
+
+  footer p {
+    margin: 0.5rem;
   }
 }
