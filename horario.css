@@ -88,7 +88,7 @@ header {
   margin-top: 0rem;
   margin-bottom: 4rem;
   position: fixed;
-  top: 35%;
+  top: 22%;
 }
 
 nav {
@@ -221,3 +221,61 @@ a:hover {
     opacity: 0;
   }
 }
+
+
+/* footer */
+
+footer {
+  width: 25rem;
+  left: 16rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 18rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #47bbff2c;
+  border: solid 2px white;
+}
+
+footer p {
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+footer a {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+  border: none;
+}
+
+footer a:hover {
+  background-color: transparent;
+  transform: scale(1.1);
+}
+
+footer img {
+  width: 3.2rem;
+  border-radius: 1rem;
+  background-color: white;
+  border: solid 2px white;
+}
+
+.redes-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+}
+
+.facebook {
+  background-color: white;
+  width: 2.8rem;
+}
+
