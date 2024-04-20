@@ -7,7 +7,6 @@ function redirecToIndex() {
     window.location.href = "./"
 }
 
-
 function revisarHorarioDisponible() {
     const now = new Date();
     const hours = now.getHours();
