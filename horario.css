@@ -397,8 +397,87 @@ footer img {
 
   .horario-section {
     top: 18%;
-    width: 25rem;
+    width: 23rem;
     height: 31rem;
+  }
+
+  .alerta-container {
+    right: auto;
+    left: auto;
+    width: 30rem;
+    font-size: 1rem;
+    width: 20rem;
+    padding: .8rem;
+  }
+}
+
+@media only screen and (max-width: 445px) {
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  .eslogan {
+    font-size: 1rem;
+    margin-top: -.5rem;
+    margin-bottom: 2rem;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  header a {
+    font-size: 1rem;
+    padding: .2 .6rem;
+    margin-inline: 0;
+  }
+
+  footer {
+    bottom: 1rem;
+    width: 20rem;
+    height: 8rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  header {
+    top: 0rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .horario-section , .revisa-section {
+    right: 50%;
+    width: 20rem;
+    transform: translateX(50%);
+    padding: .6rem;
+ 
+  }
+
+  .horario-section h2, .revisa-section h2 {
+    font-size: 1.4rem;
+    text-wrap: wrap;
+  }
+
+
+  .revisa-section h2 {
+    margin-right: .2rem;
+  }
+  .revisa-section {
+    top: 62%;
+    width: 18rem;
+    padding: 0rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: .5rem;
+  }
+
+  .horario-section {
+    top: 18%;
+    height: 32rem;
   }
 
   .alerta-container {
