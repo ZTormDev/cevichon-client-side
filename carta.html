@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Cevichón</title>
+    <title>Carta Cevichón</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,8 +13,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./backgroundMenu.css">
-    <link rel="stylesheet" href="./menu.css">
+    <link rel="stylesheet" href="./css/backgroundMenu.css">
+    <link rel="stylesheet" href="./css/menu.css">
 </head>
 <body>
 
@@ -42,119 +42,41 @@
         </nav>
     </header>
 
-    <div class="productos-container">
-        
-        <article>
-            <div class='image-container'>
-                <img class='imagenProducto' src="./assets/ceviches/ceviche.jpg" alt="" />
+    <div id="product-preview-container" class="product-preview-container hidden">
+        <div class="product-preview" id="product-preview">
+            <button class="cerrar-preview" onclick="closeItemPreview()">Cerrar</button>
+            <h2 class="product-preview-title">
+                NOMBRE DEL PRODUCTO
+            </h2>
+            <img class="product-preview-image" src="./assets/ceviches/ceviche.jpg" alt="">
+            <p class="product-preview-details">
+                DESCRIPCION DEL PRODUCTO Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </p>
+            <div class="product-preview-price-container">
+                <p class="product-preview-price-anterior">
+                    PRECIO ANTERIOR
+                </p>
+                <p class="product-preview-price">
+                    PRECIO
+                </p>
             </div>
-            <div class='product-details'>
-                <h2 class='nombreProducto'>Ceviche 1</h2>
-                <div class='precio-container'>
-                    <p class='precioProducto'>$3400</p>
-                </div>
-            </div>
-        </article>
-    
-        <article>
-            <div class='image-container'>
-                <img class='imagenProducto' src="./assets/ceviches/ceviche.jpg" alt="" />
-            </div>
-            <div class='product-details'>
-                <h2 class='nombreProducto'>Ceviche 1</h2>
-                <div class='precio-container'>
-                    <p class='precioProducto'>$3400</p>
-                </div>
-            </div>
-        </article>
-        <article>
-            <div class='image-container'>
-                <img class='imagenProducto' src="./assets/ceviches/ceviche.jpg" alt="" />
-            </div>
-            <div class='product-details'>
-                <h2 class='nombreProducto'>Ceviche 1</h2>
-                <div class='precio-container'>
-                    <p class='precioProducto'>$3400</p>
-                </div>
-            </div>
-        </article>
-        <article>
-            <div class='image-container'>
-                <img class='imagenProducto' src="./assets/ceviches/ceviche.jpg" alt="" />
-            </div>
-            <div class='product-details'>
-                <h2 class='nombreProducto'>Ceviche 1</h2>
-                <div class='precio-container'>
-                    <p class='precioProducto'>$3400</p>
-                </div>
-            </div>
-        </article>
-        <article>
-            <div class='image-container'>
-                <img class='imagenProducto' src="./assets/ceviches/ceviche.jpg" alt="" />
-            </div>
-            <div class='product-details'>
-                <h2 class='nombreProducto'>Ceviche 1</h2>
-                <div class='precio-container'>
-                    <p class='precioProducto'>$3400</p>
-                </div>
-            </div>
-        </article>
-        <article>
-            <div class='image-container'>
-                <img class='imagenProducto' src="./assets/ceviches/ceviche.jpg" alt="" />
-            </div>
-            <div class='product-details'>
-                <h2 class='nombreProducto'>Ceviche 1</h2>
-                <div class='precio-container'>
-                    <p class='precioProducto'>$3400</p>
-                </div>
-            </div>
-        </article>
-        <article>
-            <div class='image-container'>
-                <img class='imagenProducto' src="./assets/ceviches/ceviche.jpg" alt="" />
-            </div>
-            <div class='product-details'>
-                <h2 class='nombreProducto'>Ceviche 1</h2>
-                <div class='precio-container'>
-                    <p class='precioProducto'>$3400</p>
-                </div>
-            </div>
-        </article>
-        <article>
-            <div class='image-container'>
-                <img class='imagenProducto' src="./assets/ceviches/ceviche.jpg" alt="" />
-            </div>
-            <div class='product-details'>
-                <h2 class='nombreProducto'>Ceviche 1</h2>
-                <div class='precio-container'>
-                    <p class='precioProducto'>$3400</p>
-                </div>
-            </div>
-        </article>
-        <article>
-            <div class='image-container'>
-                <img class='imagenProducto' src="./assets/ceviches/ceviche.jpg" alt="" />
-            </div>
-            <div class='product-details'>
-                <h2 class='nombreProducto'>Ceviche 1</h2>
-                <div class='precio-container'>
-                    <p class='precioProducto'>$3400</p>
-                </div>
-            </div>
-        </article>
         </div>
+    </div>
+
+    <div class="productos-container">
+
+    </div>
 
         <footer>
             <p>Siguenos en Nuestras Redes Sociales:</p>
             <div class="redes-container">
-                <a href=""><img src="assets/icons/instagram-1-svgrepo-com.svg" alt=""></a>
+                <a href="https://www.instagram.com/cevichon91" target="_blank"><img src="assets/icons/instagram-1-svgrepo-com.svg" alt=""></a>
                 <a href=""><img class="facebook" src="assets/icons/facebook-color-svgrepo-com.svg" alt=""></a>
                 <a href=""><img src="assets/icons/tiktok-svgrepo-com.svg" alt=""></a>
             </div>
         </footer>
 
-        <script src="index.js"></script>
+        <script src="./js/index.js"></script>
+        <script src="./js/catalogoProductos.js"></script>
 </body>
 </html>

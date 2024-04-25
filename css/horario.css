@@ -116,14 +116,12 @@ a:hover {
   display: flex;
   flex-direction: column;
   width: 45rem;
-  height: 30rem;
   justify-content: start;
   align-items: start;
   border-radius: .5rem;
-  padding: 2rem;
   position: absolute;
   right: 10%;
-  top: 6.5rem;
+  top: 12.5rem;
   border-bottom: solid 8px white;
   text-align: start;
 }
@@ -131,7 +129,6 @@ a:hover {
 .horario-section h2 {
   font-size: 3rem;
   text-wrap: nowrap;
-  margin-bottom: 2rem;
 }
 
 .horario-section p {
@@ -260,10 +257,7 @@ footer a:hover {
 }
 
 footer img {
-  width: 3.2rem;
-  border-radius: 1rem;
-  background-color: white;
-  border: solid 2px white;
+  width: 3rem;
 }
 
 .redes-container {
@@ -275,9 +269,45 @@ footer img {
 
 }
 
-.facebook {
-  background-color: white;
-  width: 2.8rem;
+.horario-section h2 {
+  border-bottom: solid 4px white;
+  padding: 1.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+.horario-section {
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+
+.horario-container {
+  width: 95%;
+}
+.viernes , .sabado-domingo {
+  border-bottom: solid 1px white;
+  width: 100%;
+  padding: 2rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sabado-domingo {
+  border: 0;
+}
+
+.boton-revisar {
+  transition: all ease 0.2s;
+}
+
+.boton-revisar:hover {
+  transform: scale(1.1);
+  background-color: #4787ff;
 }
 
 @media only screen and (max-width: 1690px) {
@@ -363,23 +393,26 @@ footer img {
 
   .horario-section {
     width: 95%;
-    top: 57vw;
-    height: 76vw;
-    padding: 5vw;
+    top: 55vw;
+    height: auto;
   }
 
   .horario-section h2 {
     font-size: 6.5vw;
-    margin-bottom: 5vw;
+    padding: 5vw;
   }
 
   .horario-section p {
     font-size: 5.5vw;
   }
 
+  .sabado-domingo, .viernes {
+    padding: 6vw;
+  }
+
   .revisa-section {
     width: 95%;
-    top: 140vw;
+    top: 145vw;
   }
   .revisa-section h2 {
     font-size: 6.5vw;
@@ -392,7 +425,7 @@ footer img {
 
   .alerta-container {
     width: 95%;
-    top: 170vw;
+    top: 174vw;
     font-size: 4vw;
     padding: 3vw;
   }
