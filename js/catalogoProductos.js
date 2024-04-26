@@ -184,7 +184,7 @@ function generarProductos() {
 
   function mostrarDetalleProducto(producto) {
     productPreviewTitle.innerHTML = `${producto.nombre} <p class="preview-tamaño-ceviche">${producto.tamaño}</p>`;
-    productPreviewImage.src = `./assets/ceviches/${producto.imagen}`;
+    productPreviewImage.src = `./assets/${producto.imagen}`;
     productPreviewDetails.innerHTML = producto.descripcion;
     productPreviewPriceAnterior.innerHTML = producto.precioAnterior;
     productPreviewPrice.innerHTML = producto.precioActual;

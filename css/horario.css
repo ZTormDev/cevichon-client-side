@@ -33,11 +33,6 @@ h1:hover {
   cursor: default;
 }
 
-html, body {
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
 body {
   font-family: "Work Sans", sans-serif;
   font-size: 1rem;
@@ -51,6 +46,10 @@ body {
   background-color: rgb(0, 127, 212);
   scroll-behavior: smooth;
   max-height: fit-content;
+}
+
+html {
+  overflow-y: visible;
 }
 
 a {

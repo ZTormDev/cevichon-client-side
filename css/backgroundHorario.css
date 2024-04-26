@@ -7,10 +7,13 @@ body {
     flex-direction: column;
     justify-content: center;
     background-repeat: no-repeat;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 html {
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .ocean {
