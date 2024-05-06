@@ -272,7 +272,6 @@ function generarProductos() {
     ItemPreviewContainer.classList.remove('hidden');
     ItemPreview.classList.add('enterAnimation');
 
-    body.style.overflowY="hidden";
 
     if(producto.seleccion == 'si') {
       seleccionContainer.classList.remove('hidden')
