@@ -1,6 +1,6 @@
 :root {
   --body-bg: #0f0f0f;
-  --main-color: #47bbff;
+  --main-color: #439cf0;
   --txt-color: #fff;
   --white: #fff;
   --black: #000;
@@ -230,7 +230,7 @@ footer {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 30rem;
+  top: 32rem;
   padding: 1rem;
   border-radius: 1rem;
   background-color: #47bbff2c;
@@ -309,6 +309,48 @@ footer img {
   background-color: #4787ff;
 }
 
+
+header nav a svg {
+  transform: scale();
+  width: 2rem;
+  height: auto;
+  margin-left: .5rem;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+}
+
+header nav a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav a:hover svg path{
+  stroke: #439cf0;
+}
+
+header nav a:hover .contactanosicon path{
+  fill: #439cf0;
+}
+
+
+.alerta-container h2 img {
+  width: 3rem;
+  height: auto;
+  margin-left: 1rem;
+}
+
+.alerta-container h2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 @media only screen and (max-width: 1690px) {
 
   footer {
@@ -382,8 +424,12 @@ footer img {
   }
 
   nav a {
-    padding: .4rem .8rem;
-    margin-inline: 0rem;
+    padding: .2rem .4rem;
+    margin-inline: 0.2rem;
+  }
+
+  header nav a svg {
+    width: 1.8rem;
   }
 
 }
@@ -432,7 +478,7 @@ footer img {
   header h1 {
     font-size: 18vw;
     transform: translateX(-.5rem);
-    margin-bottom: .5rem;
+    margin-bottom: 2vw;
   }
 
   .eslogan {
@@ -442,7 +488,16 @@ footer img {
 
   header nav a {
     font-size: 4.5vw;
-    padding: 1.5vw 3vw;
+    padding: 1vw 1.5vw;
+    margin-inline: .5vw;
+  }
+
+  header nav a svg {
+    width: 6vw;
+  }
+
+  header nav {
+    margin-top: -8vw;
   }
 
 
@@ -454,5 +509,10 @@ footer img {
 
   footer p {
     font-size: 4.5vw;
+  }
+
+  .alerta-container h2 img {
+    margin-left: 2vw;
+    width: 10vw;
   }
 }

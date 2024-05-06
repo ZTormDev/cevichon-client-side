@@ -1,6 +1,6 @@
 :root {
   --body-bg: #0f0f0f;
-  --main-color: #47bbff;
+  --main-color: #439cf0;
   --txt-color: #fff;
   --white: #fff;
   --black: #000;
@@ -11,6 +11,7 @@
   --mobile-width: 600px;
   --tablet-width: 1024px;
 }
+
 
 
 * {
@@ -123,6 +124,34 @@ nav {
   animation: navigationIntro 3.5s ease-in-out 0s 1 normal forwards;
 }
 
+
+header nav a svg {
+  transform: scale();
+  width: 2rem;
+  height: auto;
+  margin-left: .5rem;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+}
+
+header nav a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav a:hover svg path{
+  stroke: #439cf0;
+}
+
+header nav a:hover .contactanosicon path{
+  fill: #439cf0;
+}
+
 @keyframes cevichonLogoIntro {
   0% {
     transform: translateY(-50rem);
@@ -165,6 +194,12 @@ nav {
   .eslogan {
     font-size: 1.4rem;
   }
+
+  
+  header nav a svg {
+    width: 1.5rem;
+  }
+
 }
 
 @media only screen and (max-width: 575px) {
@@ -180,16 +215,20 @@ nav {
   a {
     font-size: 1rem;
   }
+
+  header nav a svg {
+    width: 1rem;
+  }
 }
 
 @media only screen and (max-width: 380px) {
   h1 {
-    font-size: 3.5rem;
-    transform: translateX(-.3rem);
+    font-size: 19vw;
+    transform: translateX(-.5rem);
   }
 
   .eslogan {
-    font-size: 1rem;
+    font-size: 4vw;
     margin-top: -0.5rem;
     margin-bottom: 2rem;
     transform: translateX(-.3rem);
@@ -199,6 +238,18 @@ nav {
     font-size: 1rem;
     margin-inline: 0rem;
     padding: .2rem .6rem;
+  }
+
+  
+  header nav a svg {
+    margin-left: 1.5vw;
+    width: 6.5vw;
+  }
+
+  nav a {
+    font-size: 4.2vw;
+    padding: 1vw 2vw;
+    margin-inline: 1vw;
   }
 
 }

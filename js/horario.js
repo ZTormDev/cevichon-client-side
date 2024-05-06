@@ -8,6 +8,10 @@ const horarios = [
     { dia: 6, abre: true, horaApertura: 10, horaCierre: 24 }, // Sábado
 ];
 
+
+checkIcon = '../assets/icons/check-circle-svgrepo-com.svg'
+errorIcon = '../assets/icons/error-filled-svgrepo-com.svg'
+
 function revisarHorarioDisponible() {
     const now = new Date();
     const diaActual = now.getDay();
@@ -18,7 +22,7 @@ function revisarHorarioDisponible() {
 
     const diaHorario = horarios.find(item => item.dia === diaActual);
     if (!diaHorario) {
-        textoAlerta.innerHTML = "NO ESTAMOS ATENDIENDO";
+        textoAlerta.innerHTML = `NO ESTAMOS ATENDIENDO <img src="${errorIcon}" alt="">`;
         document.getElementById("color-container").style.backgroundColor = "#e75757";
     } else {
         const horaApertura = diaHorario.horaApertura;
@@ -28,20 +32,20 @@ function revisarHorarioDisponible() {
             // Si la hora de apertura es menor o igual a la hora de cierre, se verifica el horario normalmente
             const isOpenHour = horaActual >= horaApertura && horaActual < horaCierre;
             if (diaHorario.abre && isOpenHour) {
-                textoAlerta.innerHTML = "ESTAMOS ATENDIENDO";
+                textoAlerta.innerHTML = `ESTAMOS ATENDIENDO <img src="${checkIcon}" alt="">`;
                 document.getElementById("color-container").style.backgroundColor = "#70e289";
             } else {
-                textoAlerta.innerHTML = "NO ESTAMOS ATENDIENDO";
+                textoAlerta.innerHTML = `NO ESTAMOS ATENDIENDO <img src="${errorIcon}" alt="">`;
                 document.getElementById("color-container").style.backgroundColor = "#e75757";
             }
         } else {
             // Si la hora de apertura es mayor a la hora de cierre, se verifica si la hora actual está dentro del horario invertido
             const isOpenHour = horaActual >= horaApertura || horaActual < horaCierre;
             if (diaHorario.abre && isOpenHour) {
-                textoAlerta.innerHTML = "ESTAMOS ATENDIENDO";
+                textoAlerta.innerHTML = `ESTAMOS ATENDIENDO <img src="${checkIcon}" alt="">`;
                 document.getElementById("color-container").style.backgroundColor = "#70e289";
             } else {
-                textoAlerta.innerHTML = "NO ESTAMOS ATENDIENDO";
+                textoAlerta.innerHTML = `NO ESTAMOS ATENDIENDO <img src="${errorIcon}" alt="">`;
                 document.getElementById("color-container").style.backgroundColor = "#e75757";
             }
         }
