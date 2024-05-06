@@ -16,7 +16,7 @@ const productos = [
     {
       nombre: 'Cevichón',
       tamaño: '500g', 
-      imagen: '/ceviches/ceviche1kg.png',
+      imagen: '/ceviches/cevich.png',
       descripcionCorta: 'Elige entre Camarón, Salmón o Macha.',
       descripcion: 'Cevichon Macha, Camaron, Salmon, con maiz/choclo, pimenton verde y un poco de aji, mas unas 3 tostadas de oregano y mantequilla.',
       precioAnterior: '$7.500',
@@ -28,7 +28,7 @@ const productos = [
     {
       nombre: 'Cevichón',
       tamaño: '1kg', 
-      imagen: '/ceviches/ceviche21kg.png',
+      imagen: '/ceviches/ceviche.png',
       descripcionCorta: 'Elige entre Camarón, Salmón o Macha.',
       descripcion: 'Cevichon Macha, Camaron, Salmon, con maiz/choclo, pimenton verde y un poco de aji, mas unas 3 tostadas de oregano y mantequilla.',
       precioAnterior: '$11.500',
@@ -88,7 +88,7 @@ const productos = [
     {
       nombre: 'Cevichón',
       tamaño: '500g', 
-      imagen: '/ceviches/ceviche.jpg',
+      imagen: '/ceviches/cevic.jpg',
       descripcionCorta: 'Elije entre Macha y Salmón o Macha y Camarón',
       descripcion: 'Cevichon Macha, Camaron, Salmon, con maiz/choclo, pimenton verde y un poco de aji, mas unas 3 tostadas de oregano y mantequilla.',
       precioAnterior: '$7.500',
@@ -100,7 +100,7 @@ const productos = [
     {
       nombre: 'Cevichón',
       tamaño: '1kg', 
-      imagen: '/ceviches/ceviche21kg.png',
+      imagen: '/ceviches/cevich.png',
       descripcionCorta: 'Elije entre Macha y Salmón o Macha y Camarón',
       descripcion: 'Cevichon Macha, Camaron, Salmon, con maiz/choclo, pimenton verde y un poco de aji, mas unas 3 tostadas de oregano y mantequilla.',
       precioAnterior: '$13.000',
@@ -151,17 +151,17 @@ const productos = [
       tamaño: '3 uds', 
       imagen: '/agregados/tostadas.png',
       descripcionCorta: 'Tostadas de oregano y mantequilla',
-      descripcion: 'Cevichon Macha, Camaron, Salmon, con maiz/choclo, pimenton verde y un poco de aji, mas unas 3 tostadas de oregano y mantequilla.',
+      descripcion: 'Tostaditas cubiertas con mantequilla y un liguero toque de oregano lo cual es conveniente con un buen ceviche.',
       precioAnterior: '$2.000',
       precioActual: '$1.000',
       cantidad: '1'
     },
     {
-      nombre: 'Salsa de Ajo',
+      nombre: 'Salsa de Cilantro',
       tamaño: '1 uds', 
       imagen: '/agregados/salsadeajo.png',
-      descripcionCorta: '',
-      descripcion: 'Cevichon Macha, Camaron, Salmon, con maiz/choclo, pimenton verde y un poco de aji, mas unas 3 tostadas de oregano y mantequilla.',
+      descripcionCorta: 'Deliciosa lactonesa echa a base leche..',
+      descripcion: 'Deliciosa lactonesa echa a base leche, ajo, aceite, limón, sal y cilantro, acompañado de la magia de la casa.',
       precioAnterior: '$1.000',
       precioActual: '$500',
       cantidad: '1'
@@ -242,6 +242,9 @@ function generarProductos() {
 
   // Función para actualizar el enlace del botón "Pedir" con la cantidad seleccionada
   function actualizarEnlacePedir(producto) {
+    const datosGuardados = localStorage.getItem('datosCliente');
+    const datos = JSON.parse(datosGuardados);
+
     let cantidad = parseInt(cantidadText.innerHTML);
 
     let precioProducto = producto.precioActual.replace(/\./g, '').replace('$', '');
@@ -250,10 +253,32 @@ function generarProductos() {
     let precioTotalConPuntos = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 
     let mensajeCantidad = producto.seleccion === 'si' ? `Seleccion: *${seleccionButtons.querySelector('.active').textContent}*, ` : ``;
-    productPreviewPedirButton.setAttribute('href', `https://wa.me/56963360528?text=Hola, este es mi pedido: *${producto.nombre}* *${producto.tamaño}*, Cantidad: *${cantidad}*, ${mensajeCantidad}Total: *$${precioTotalConPuntos}*`);
+
+    if (datosGuardados) {
+      
+      productPreviewPedirButton.setAttribute('href', `https://wa.me/56963360528?text=Hola, este es mi pedido:%0A*${producto.nombre}* *${producto.tamaño}*%0ACantidad: *${cantidad}*, ${mensajeCantidad}%0ATotal: *$${precioTotalConPuntos}*%0A%0AMi datos son:%0ANombre: ${datos.nombre}%0ATelefono: ${datos.telefono}%0ADireccion: ${datos.direccion}%0AComuna: ${datos.comuna}%0AReferencias: ${datos.referencia}`);
+    }
+    else {
+      productPreviewPedirButton.removeAttribute('href');
+      productPreviewPedirButton.setAttribute('onclick', 'mostrarAlertaPedir()');
+    }
   }
 
+  const alertaPedirContainer = document.querySelector('.alerta-pedir-container');
 
+  function mostrarAlertaPedir() {
+    alertaPedirContainer.style.display = 'flex';
+    ItemPreviewContainer.classList.add('hidden');
+  }
+
+  function ocultarAlertaPedir() {
+    alertaPedirContainer.style.display = 'none';
+  }
+
+  function mostrarIngresarDatos() {
+    alertaPedirContainer.style.display = 'none';
+    datosBG.style.display = 'flex';
+  }
 
   function mostrarDetalleProducto(producto) {
     productPreviewTitle.innerHTML = `${producto.nombre} <p class="preview-tamaño-ceviche">${producto.tamaño}</p>`;
@@ -261,9 +286,25 @@ function generarProductos() {
     productPreviewDetails.innerHTML = producto.descripcion;
     productPreviewPriceAnterior.innerHTML = producto.precioAnterior;
     productPreviewPrice.innerHTML = producto.precioActual;
+
+    const datosGuardados = localStorage.getItem('datosCliente');
+    productPreviewPedirButton.removeAttribute('href');
+    productPreviewPedirButton.removeAttribute('onclick');
+
+    if (datosGuardados) { 
+      //AQUI ACTUALIZAR EL LINKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
+      const datosGuardados = localStorage.getItem('datosCliente');
+      const datos = JSON.parse(datosGuardados);
+      productPreviewPedirButton.setAttribute('href', `https://wa.me/56963360528?text=Hola, este es mi pedido:%0A*${producto.nombre}* *${producto.tamaño}*%0ACantidad: *${cantidadText.innerHTML}*%0ATotal: *${producto.precioActual}*%0A%0AMi datos son:%0ANombre: ${datos.nombre}%0ATelefono: ${datos.telefono}%0ADireccion: ${datos.direccion}%0AComuna: ${datos.comuna}%0AReferencias: ${datos.referencia}`);
+    } 
+    else {
+      productPreviewPedirButton.removeAttribute('href');
+      if(producto.seleccion != 'si') {
+        productPreviewPedirButton.setAttribute('onclick', 'mostrarAlertaPedir()');
+      }
+    }
     
-    // Aquí actualizamos el enlace del botón "Pedir" con la cantidad seleccionada
-    productPreviewPedirButton.setAttribute('href', `https://wa.me/56963360528?text=Hola, este es mi pedido: *${producto.nombre}* *${producto.tamaño}*, Cantidad: *${cantidadText.innerHTML}*, Precio: *${producto.precioActual * producto.cantidad}*`);
+
 
     cantidadText.innerHTML = `${producto.cantidad}`;
     sumarButton.onclick = () => sumar(producto);
@@ -274,10 +315,16 @@ function generarProductos() {
 
 
     if(producto.seleccion == 'si') {
+      const datosGuardados = localStorage.getItem('datosCliente');
+      const datos = JSON.parse(datosGuardados);
+
       seleccionContainer.classList.remove('hidden')
 
       // Limpiamos el contenedor antes de agregar nuevos botones
       seleccionButtons.innerHTML = '';
+
+      productPreviewPedirButton.classList.add('disabled');
+      productPreviewPedirButton.removeAttribute('href');
 
       producto.tipoSeleccion.forEach(tipo => {
         const button = document.createElement('button');
@@ -292,7 +339,21 @@ function generarProductos() {
             // Agregar la clase 'active' al botón actual
             button.classList.add('active');
             // Actualizar el enlace del botón "Pedir" con la nueva selección
-            productPreviewPedirButton.setAttribute('href', `https://wa.me/56963360528?text=Hola, este es mi pedido: *${producto.nombre}* *${producto.tamaño}*, Seleccion: *${tipo}*, Cantidad: *${cantidadText.innerHTML}*, Precio: *${producto.precioActual}*`);
+            productPreviewPedirButton.classList.remove('disabled');
+
+            if (datosGuardados) {
+              let cantidad = parseInt(cantidadText.innerHTML);
+              let precioProducto = producto.precioActual.replace(/\./g, '').replace('$', '');
+              let total = precioProducto * cantidad;
+              let precioTotalConPuntos = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+
+              productPreviewPedirButton.setAttribute('href', `https://wa.me/56963360528?text=Hola, este es mi pedido:%0A*${producto.nombre}* *${producto.tamaño}*%0ASeleccion: *${tipo}*%0ACantidad: *${cantidadText.innerHTML}*%0ATotal: *$${precioTotalConPuntos}*%0A%0AMi datos son:%0ANombre: ${datos.nombre}%0ATelefono: ${datos.telefono}%0ADireccion: ${datos.direccion}%0AComuna: ${datos.comuna}%0AReferencias: ${datos.referencia}`);
+            }
+            else {
+              productPreviewPedirButton.removeAttribute('href');
+              productPreviewPedirButton.setAttribute('onclick', 'mostrarAlertaPedir()');
+            }
+            
         };
         seleccionButtons.appendChild(button);
     });
@@ -308,4 +369,123 @@ function generarProductos() {
     ItemPreview.classList.remove('enterAnimation')
   }
 
-window.onload = generarProductos;
+
+  const datosBG = document.querySelector('.datos-container-bg');
+
+  function mostrarDatos() {
+    datosBG.style.display = 'flex';
+  }
+
+  function ocultarDatos() {
+    datosBG.style.display = 'none';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const nombreInput = document.querySelector('input[name="nombre"]');
+    const telefonoInput = document.querySelector('input[name="telefono"]');
+    const direccionInput = document.querySelector('input[name="direccion"]');
+    const comunaInput = document.querySelector('input[name="comuna"]');
+    const numeroInput = document.querySelector('input[name="referencia"]');
+    const placeholdenButtonConfirmar = document.querySelector('.confirmar-placeholder');
+    const confirmarButton = document.getElementById('confirmar-button');
+    const regexNumeros = /^\+?[0-9]+$/;
+
+
+    function guardarDatosLocalStorage() {
+      const datos = {
+          nombre: nombreInput.value.trim(),
+          telefono: telefonoInput.value.trim(),
+          direccion: direccionInput.value.trim(),
+          comuna: comunaInput.value.trim(),
+          referencia: numeroInput.value.trim()
+      };
+      localStorage.setItem('datosCliente', JSON.stringify(datos));
+  }
+
+  function cargarDatosLocalStorage() {
+      const datosGuardados = localStorage.getItem('datosCliente');
+      if (datosGuardados) {
+          const datos = JSON.parse(datosGuardados);
+          nombreInput.value = datos.nombre;
+          telefonoInput.value = datos.telefono;
+          direccionInput.value = datos.direccion;
+          comunaInput.value = datos.comuna;
+          numeroInput.value = datos.referencia;
+          actualizarEstiloConfirmar();
+      }
+  }
+
+    // Función para verificar si todos los campos están completos
+    function verificarDatosCompletos() {
+        return (
+            nombreInput.value.trim().toLowerCase() !== '' &&
+            regexNumeros.test(telefonoInput.value.trim().toLowerCase()) &&
+            telefonoInput.value.trim().toLowerCase().length >= 9 &&
+            telefonoInput.value.trim().toLowerCase().length <= 12 &&
+            direccionInput.value.trim().toLowerCase() !== '' &&
+            numeroInput.value.trim().toLowerCase() !== '' &&
+            comunaInput.value.trim().toLowerCase() === 'concepcion' || comunaInput.value.trim().toLowerCase() === 'concepción'
+            
+        );
+    }
+    const inputComuna = document.querySelector('input[name="comuna"]');
+    const inputTelefono = document.querySelector('input[name="telefono"]');
+    const alertaComuna = document.querySelector('.alerta-comuna');
+    const alertaTelefono = document.querySelector('.alerta-telefono');
+  
+    inputComuna.addEventListener('input', function() {
+      const comunaValue = inputComuna.value.trim().toLowerCase();
+  
+      if (comunaValue !== 'concepcion' && comunaValue !== 'concepción') {
+        alertaComuna.classList.remove('hidden');
+      } else {
+        alertaComuna.classList.add('hidden');
+      }
+  });
+
+  inputTelefono.addEventListener('input', function() {
+    const telefonoValue = inputTelefono.value.trim().toLowerCase();
+
+    if (telefonoValue.length >= 9 && telefonoValue.length <= 12 && regexNumeros.test(telefonoValue)) {
+      alertaTelefono.classList.add('hidden');
+    } else {
+      alertaTelefono.classList.remove('hidden');
+    }
+});
+
+    
+    // Función para ocultar el contenedor de fondo
+    function ocultarDatosContainer() {
+      datosBG.style.display = 'none';
+      guardarDatosLocalStorage();
+    }
+
+  // Función para actualizar el estilo del botón "Confirmar datos"
+  function actualizarEstiloConfirmar() {
+      if (verificarDatosCompletos()) {
+          confirmarButton.style.opacity = '1';
+          confirmarButton.style.cursor = 'pointer';
+          placeholdenButtonConfirmar.classList.add('hidden');
+          confirmarButton.onclick = ocultarDatosContainer;
+      } else {
+          confirmarButton.style.opacity = '0.5'; // O cualquier otro valor de opacidad que desees
+          confirmarButton.style.cursor = 'default';
+          placeholdenButtonConfirmar.classList.remove('hidden');
+      }
+  }
+
+    // Agregar evento input a los campos de entrada
+    nombreInput.addEventListener('input', actualizarEstiloConfirmar);
+    telefonoInput.addEventListener('input', actualizarEstiloConfirmar);
+    direccionInput.addEventListener('input', actualizarEstiloConfirmar);
+    comunaInput.addEventListener('input', actualizarEstiloConfirmar);
+    numeroInput.addEventListener('input', actualizarEstiloConfirmar);
+
+  window.onload = function() {
+    cargarDatosLocalStorage();
+    generarProductos(); // Esta función debería estar disponible aquí si no está declarada globalmente
+};
+
+});
+
+

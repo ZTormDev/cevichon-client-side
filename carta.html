@@ -52,7 +52,46 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12 23C10.7764 23 10.0994 22.8687 9 22.5L6.89443 23.5528C5.56462 24.2177 4 23.2507 4 21.7639V19.5C1.84655 17.492 1 15.1767 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23ZM6 18.6303L5.36395 18.0372C3.69087 16.4772 3 14.7331 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C11.0143 21 10.552 20.911 9.63595 20.6038L8.84847 20.3397L6 21.7639V18.6303Z" fill="#fff"/>
                 </svg></a>
         </nav>
+        <div class="direccion-container">
+            <button class="direccion-button" onclick="mostrarDatos()">Ingresar Tus Datos <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="0.5" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" fill="#ffffff"></path> <path d="M16.807 19.0112C15.4398 19.9504 13.7841 20.5 12 20.5C10.2159 20.5 8.56023 19.9503 7.193 19.0111C6.58915 18.5963 6.33109 17.8062 6.68219 17.1632C7.41001 15.8302 8.90973 15 12 15C15.0903 15 16.59 15.8303 17.3178 17.1632C17.6689 17.8062 17.4108 18.5964 16.807 19.0112Z" fill="#ffffff"></path> <path d="M12 12C13.6569 12 15 10.6569 15 9C15 7.34315 13.6569 6 12 6C10.3432 6 9.00004 7.34315 9.00004 9C9.00004 10.6569 10.3432 12 12 12Z" fill="#ffffff"></path> </g></svg></button>
+        </div>
     </header>
+
+    <div class="datos-container-bg">
+        <div class="datos-container">
+            <h2 class="datos-title">Tus datos</h2>
+            <div class="datos-all-container">
+                <div class="datos-personales">
+                    <p class="datos-label">Nombre y Apellido</p>
+                    <input name="nombre" type="text" placeholder="Ejemplo: Vicente Rojas" required>
+                    <p class="datos-label">Telefono</p>
+                    <input name="telefono" type="tel" placeholder="Ejemplo: +56 9 1234 5678" required>
+                    <p class="alerta-telefono hidden">Porfavor ingresa un numero valido</p>
+                </div>
+                <div class="datos-direccion">
+                    <p class="datos-label">Dirección (calle y número)</p>
+                    <input name="direccion" type="text" placeholder="Ejemplo: Ohiggins 378" required>
+
+                    <p class="datos-label">Comuna</p>
+                    <input name="comuna" type="text" placeholder="Ejemplo: Concepción" required>
+                    <p class="alerta-comuna hidden">Solo hacemos pedidos dentro de concepcion</p>
+
+                    <p class="datos-label">Número Dpto y/o referencias</p>
+                    <input name="referencia" type="text" placeholder="Ejemplo: Dpto 202 Torre A" required>
+                </div>
+            </div>
+            <button id="confirmar-button" class="confirmar-button">Confirmar datos <p class="confirmar-placeholder">Ingresa datos validos</p></button>
+            <button class="volver-button" onclick="ocultarDatos()">Volver</button>
+        </div>
+    </div>
+
+    <div class="alerta-pedir-container">
+        <div class="alerta-pedir">
+            <p>Necesitas ingresar tus datos para realizar un pedido</p>
+            <button class="ingresardatos" onclick="mostrarIngresarDatos()">Ingresar datos</button>
+            <button onclick="ocultarAlertaPedir()">Cerrar</button>
+        </div>
+    </div>
 
     <div id="product-preview-container" class="product-preview-container hidden">
         
