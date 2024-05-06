@@ -250,7 +250,7 @@ function generarProductos() {
     let precioTotalConPuntos = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 
     let mensajeCantidad = producto.seleccion === 'si' ? `Seleccion: *${seleccionButtons.querySelector('.active').textContent}*, ` : ``;
-    productPreviewPedirButton.setAttribute('href', `https://wa.me/56982664027?text=Hola, este es mi pedido: *${producto.nombre}* *${producto.tamaño}*, Cantidad: *${cantidad}*, ${mensajeCantidad}Total: *$${precioTotalConPuntos}*`);
+    productPreviewPedirButton.setAttribute('href', `https://wa.me/56963360528?text=Hola, este es mi pedido: *${producto.nombre}* *${producto.tamaño}*, Cantidad: *${cantidad}*, ${mensajeCantidad}Total: *$${precioTotalConPuntos}*`);
   }
 
 
@@ -263,7 +263,7 @@ function generarProductos() {
     productPreviewPrice.innerHTML = producto.precioActual;
     
     // Aquí actualizamos el enlace del botón "Pedir" con la cantidad seleccionada
-    productPreviewPedirButton.setAttribute('href', `https://wa.me/56982664027?text=Hola, este es mi pedido: *${producto.nombre}* *${producto.tamaño}*, Cantidad: *${cantidadText.innerHTML}*, Precio: *${producto.precioActual * producto.cantidad}*`);
+    productPreviewPedirButton.setAttribute('href', `https://wa.me/56963360528?text=Hola, este es mi pedido: *${producto.nombre}* *${producto.tamaño}*, Cantidad: *${cantidadText.innerHTML}*, Precio: *${producto.precioActual * producto.cantidad}*`);
 
     cantidadText.innerHTML = `${producto.cantidad}`;
     sumarButton.onclick = () => sumar(producto);
@@ -271,6 +271,8 @@ function generarProductos() {
 
     ItemPreviewContainer.classList.remove('hidden');
     ItemPreview.classList.add('enterAnimation');
+
+    body.style.overflowY="hidden";
 
     if(producto.seleccion == 'si') {
       seleccionContainer.classList.remove('hidden')
@@ -291,7 +293,7 @@ function generarProductos() {
             // Agregar la clase 'active' al botón actual
             button.classList.add('active');
             // Actualizar el enlace del botón "Pedir" con la nueva selección
-            productPreviewPedirButton.setAttribute('href', `https://wa.me/56982664027?text=Hola, este es mi pedido: *${producto.nombre}* *${producto.tamaño}*, Seleccion: *${tipo}*, Cantidad: *${cantidadText.innerHTML}*, Precio: *${producto.precioActual}*`);
+            productPreviewPedirButton.setAttribute('href', `https://wa.me/56963360528?text=Hola, este es mi pedido: *${producto.nombre}* *${producto.tamaño}*, Seleccion: *${tipo}*, Cantidad: *${cantidadText.innerHTML}*, Precio: *${producto.precioActual}*`);
         };
         seleccionButtons.appendChild(button);
     });

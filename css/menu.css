@@ -632,7 +632,9 @@ header nav a:hover .contactanosicon path{
 }
 
 
-
+.product-preview-container {
+  overflow-y: auto;
+}
 
 
 
@@ -713,6 +715,41 @@ header nav a:hover .contactanosicon path{
     width: 6.5vw;
   }
 
+
+  .seleccion-container p {
+    font-size: 5vw;
+  }
+
+  .seleccion-buttons {
+    gap: 3vw;
+  }
+
+  .seleccion-buttons button {
+    font-size: 4vw;
+    padding: 1vw 3vw;
+  }
+
+  .product-preview-price {
+    font-size: 6vw;
+    padding: 1.5vw 2.5vw;
+  }
+
+  .product-preview-price-anterior {
+    font-size: 4vw;
+  }
+
+  .controlador-cantidad p , .controlador-cantidad button {
+    font-size: 5.5vw;
+  }
+
+  .controlador-cantidad p {
+    padding: 1.8vw 4vw;
+  }
+
+  .controlador-cantidad button {
+    padding: 1.8vw 4vw;
+  }
+
 }
 
 @media only screen and (max-width: 540px) {
@@ -723,8 +760,8 @@ header nav a:hover .contactanosicon path{
   }
 
   .product-preview-title {
-    font-size: 7vw;
-    padding: 6vw 4vw;
+    font-size: 10vw;
+    padding: 2vw 4vw;
   }
 
   .preview-tamaño-ceviche {
