@@ -269,15 +269,24 @@ function generarProductos() {
   function mostrarAlertaPedir() {
     alertaPedirContainer.style.display = 'flex';
     ItemPreviewContainer.classList.add('hidden');
+    const bodyhtml = document.querySelector('html');
+
+    bodyhtml.style.overflowY = 'hidden';
   }
 
   function ocultarAlertaPedir() {
     alertaPedirContainer.style.display = 'none';
+    const bodyhtml = document.querySelector('html');
+
+    bodyhtml.style.overflowY = 'auto';
   }
 
   function mostrarIngresarDatos() {
     alertaPedirContainer.style.display = 'none';
     datosBG.style.display = 'flex';
+    const bodyhtml = document.querySelector('html');
+
+    bodyhtml.style.overflowY = 'hidden';
   }
 
   function mostrarDetalleProducto(producto) {
@@ -379,10 +388,16 @@ function generarProductos() {
 
   function mostrarDatos() {
     datosBG.style.display = 'flex';
+    const bodyhtml = document.querySelector('html');
+
+    bodyhtml.style.overflowY = 'hidden';
   }
 
   function ocultarDatos() {
     datosBG.style.display = 'none';
+    const bodyhtml = document.querySelector('html');
+
+    bodyhtml.style.overflowY = 'auto';
   }
 
   document.addEventListener('DOMContentLoaded', function() {
@@ -464,6 +479,9 @@ function generarProductos() {
     // Función para ocultar el contenedor de fondo
     function ocultarDatosContainer() {
       datosBG.style.display = 'none';
+      const bodyhtml = document.querySelector('html');
+
+      bodyhtml.style.overflowY = 'auto';
       guardarDatosLocalStorage();
     }
 
