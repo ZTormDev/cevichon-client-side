@@ -255,8 +255,8 @@ function generarProductos() {
     let mensajeCantidad = producto.seleccion === 'si' ? `Seleccion: *${seleccionButtons.querySelector('.active').textContent}*, ` : ``;
 
     if (datosGuardados) {
-      
-      productPreviewPedirButton.setAttribute('href', `https://wa.me/56963360528?text=Hola, este es mi pedido:%0A*${producto.nombre}* *${producto.tamaño}*%0ACantidad: *${cantidad}*, ${mensajeCantidad}%0ATotal: *$${precioTotalConPuntos}*%0A%0AMi datos son:%0ANombre: ${datos.nombre}%0ATelefono: ${datos.telefono}%0ADireccion: ${datos.direccion}%0AComuna: ${datos.comuna}%0AReferencias: ${datos.referencia}`);
+      let telefonoCodificado = encodeURIComponent(`${datos.telefono}`);
+      productPreviewPedirButton.setAttribute('href', `https://wa.me/56963360528?text=Hola, este es mi pedido:%0A*${producto.nombre}*%0ATamaño: *${producto.tamaño}*%0ACantidad: *${cantidad}*%0A${mensajeCantidad}%0ATotal: *$${precioTotalConPuntos}*%0A%0AMi datos son:%0ANombre: *${datos.nombre}*%0ATelefono: *${telefonoCodificado}*%0ADireccion: *${datos.direccion}*%0AComuna: *${datos.comuna}*%0AReferencias: *${datos.referencia}*`);
     }
     else {
       productPreviewPedirButton.removeAttribute('href');
@@ -288,19 +288,23 @@ function generarProductos() {
     productPreviewPrice.innerHTML = producto.precioActual;
 
     const datosGuardados = localStorage.getItem('datosCliente');
+    const datos = JSON.parse(datosGuardados);
+
+    productPreviewPedirButton.classList.remove('disabled');
     productPreviewPedirButton.removeAttribute('href');
     productPreviewPedirButton.removeAttribute('onclick');
 
     if (datosGuardados) { 
       //AQUI ACTUALIZAR EL LINKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
-      const datosGuardados = localStorage.getItem('datosCliente');
-      const datos = JSON.parse(datosGuardados);
-      productPreviewPedirButton.setAttribute('href', `https://wa.me/56963360528?text=Hola, este es mi pedido:%0A*${producto.nombre}* *${producto.tamaño}*%0ACantidad: *${cantidadText.innerHTML}*%0ATotal: *${producto.precioActual}*%0A%0AMi datos son:%0ANombre: ${datos.nombre}%0ATelefono: ${datos.telefono}%0ADireccion: ${datos.direccion}%0AComuna: ${datos.comuna}%0AReferencias: ${datos.referencia}`);
+      let telefonoCodificado = encodeURIComponent(`${datos.telefono}`);
+      productPreviewPedirButton.setAttribute('href', `https://wa.me/56963360528?text=Hola, este es mi pedido:%0A*${producto.nombre}*%0ATamaño: *${producto.tamaño}*%0ACantidad: *${cantidadText.innerHTML}*%0ATotal: *${producto.precioActual}*%0A%0AMi datos son:%0ANombre: *${datos.nombre}*%0ATelefono: *${telefonoCodificado}*%0ADireccion: *${datos.direccion}*%0AComuna: *${datos.comuna}*%0AReferencias: *${datos.referencia}*`);
     } 
     else {
       productPreviewPedirButton.removeAttribute('href');
+      productPreviewPedirButton.classList.remove('disabled');
+
       if(producto.seleccion != 'si') {
-        productPreviewPedirButton.setAttribute('onclick', 'mostrarAlertaPedir()');
+        productPreviewPedirButton.setAttribute('onclick', 'mostrarAlertaPedir()');  
       }
     }
     
@@ -315,12 +319,7 @@ function generarProductos() {
 
 
     if(producto.seleccion == 'si') {
-      const datosGuardados = localStorage.getItem('datosCliente');
-      const datos = JSON.parse(datosGuardados);
-
       seleccionContainer.classList.remove('hidden')
-
-      // Limpiamos el contenedor antes de agregar nuevos botones
       seleccionButtons.innerHTML = '';
 
       productPreviewPedirButton.classList.add('disabled');
@@ -346,8 +345,8 @@ function generarProductos() {
               let precioProducto = producto.precioActual.replace(/\./g, '').replace('$', '');
               let total = precioProducto * cantidad;
               let precioTotalConPuntos = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-
-              productPreviewPedirButton.setAttribute('href', `https://wa.me/56963360528?text=Hola, este es mi pedido:%0A*${producto.nombre}* *${producto.tamaño}*%0ASeleccion: *${tipo}*%0ACantidad: *${cantidadText.innerHTML}*%0ATotal: *$${precioTotalConPuntos}*%0A%0AMi datos son:%0ANombre: ${datos.nombre}%0ATelefono: ${datos.telefono}%0ADireccion: ${datos.direccion}%0AComuna: ${datos.comuna}%0AReferencias: ${datos.referencia}`);
+              let telefonoCodificado = encodeURIComponent(`${datos.telefono}`);
+              productPreviewPedirButton.setAttribute('href', `https://wa.me/56963360528?text=Hola, este es mi pedido:%0A*${producto.nombre}*%0ATamaño: *${producto.tamaño}*%0ASeleccion: *${tipo}*%0ACantidad: *${cantidadText.innerHTML}*%0ATotal: *$${precioTotalConPuntos}*%0A%0AMi datos son:%0ANombre: *${datos.nombre}*%0ATelefono: *${telefonoCodificado}*%0ADireccion: *${datos.direccion}*%0AComuna: *${datos.comuna}*%0AReferencias: *${datos.referencia}*`);
             }
             else {
               productPreviewPedirButton.removeAttribute('href');
@@ -403,6 +402,7 @@ function generarProductos() {
   }
 
   function cargarDatosLocalStorage() {
+      const textoDatosCliente = document.querySelector('.direccion-button');
       const datosGuardados = localStorage.getItem('datosCliente');
       if (datosGuardados) {
           const datos = JSON.parse(datosGuardados);
@@ -412,6 +412,7 @@ function generarProductos() {
           comunaInput.value = datos.comuna;
           numeroInput.value = datos.referencia;
           actualizarEstiloConfirmar();
+          textoDatosCliente.innerHTML = `${datos.nombre} <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="0.5" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" fill="#ffffff"></path> <path d="M16.807 19.0112C15.4398 19.9504 13.7841 20.5 12 20.5C10.2159 20.5 8.56023 19.9503 7.193 19.0111C6.58915 18.5963 6.33109 17.8062 6.68219 17.1632C7.41001 15.8302 8.90973 15 12 15C15.0903 15 16.59 15.8303 17.3178 17.1632C17.6689 17.8062 17.4108 18.5964 16.807 19.0112Z" fill="#ffffff"></path> <path d="M12 12C13.6569 12 15 10.6569 15 9C15 7.34315 13.6569 6 12 6C10.3432 6 9.00004 7.34315 9.00004 9C9.00004 10.6569 10.3432 12 12 12Z" fill="#ffffff"></path> </g></svg>`;
       }
   }
 
@@ -419,9 +420,9 @@ function generarProductos() {
     function verificarDatosCompletos() {
         return (
             nombreInput.value.trim().toLowerCase() !== '' &&
-            regexNumeros.test(telefonoInput.value.trim().toLowerCase()) &&
-            telefonoInput.value.trim().toLowerCase().length >= 9 &&
-            telefonoInput.value.trim().toLowerCase().length <= 12 &&
+            regexNumeros.test(telefonoInput.value.trim().toLowerCase().replace(/\s/g, '')) &&
+            telefonoInput.value.trim().toLowerCase().replace(/\s/g, '').length >= 9 &&
+            telefonoInput.value.trim().toLowerCase().replace(/\s/g, '').length <= 12 &&
             direccionInput.value.trim().toLowerCase() !== '' &&
             numeroInput.value.trim().toLowerCase() !== '' &&
             comunaInput.value.trim().toLowerCase() === 'concepcion' || comunaInput.value.trim().toLowerCase() === 'concepción'
@@ -444,7 +445,7 @@ function generarProductos() {
   });
 
   inputTelefono.addEventListener('input', function() {
-    const telefonoValue = inputTelefono.value.trim().toLowerCase();
+    const telefonoValue = inputTelefono.value.trim().toLowerCase().replace(/\s/g, '');
 
     if (telefonoValue.length >= 9 && telefonoValue.length <= 12 && regexNumeros.test(telefonoValue)) {
       alertaTelefono.classList.add('hidden');
@@ -487,5 +488,3 @@ function generarProductos() {
 };
 
 });
-
-
