@@ -185,7 +185,7 @@ const productos = [
       nombre: 'Salsa de Cilantro',
       tamaño: '1 uds', 
       imagen: '/agregados/salsadeajo.png',
-      descripcionCorta: 'Deliciosa lactonesa echa a base leche..',
+      descripcionCorta: 'Deliciosa lactonesa hecha..',
       descripcion: 'Deliciosa lactonesa hecha a base de leche, ajo, aceite, limón, sal y cilantro, acompañado de la magia de la casa.',
       precioAnterior: '',
       precioActual: '$500',

@@ -881,6 +881,15 @@ body .disabled {
   width: 100%;
 }
 
+.nombreProducto {
+  text-wrap: wrap;
+}
+
+.tamaño-ceviche {
+  margin-left: .5rem;
+  margin-right: .5rem;
+}
+
 @media only screen and (max-width: 1350px) {
 
   .productos-container {
@@ -935,13 +944,40 @@ body .disabled {
 
 @media only screen and (max-width: 450px) {
 
+  .nombreProducto {
+    font-size: 4.5vw;
+  }
+
+  .text-details p {
+    font-size: 3.5vw;
+  }
+
+  .precioProducto {
+    font-size: 4vw;
+    padding: 1.5vw 3vw;
+  }
   article {
-    grid-template-columns: 1.3fr 2fr;
+    grid-template-columns: 1.2fr 2fr;
+    height: 35vw;
+  }
+
+  .product-details {
+    padding: 3vw;
+  }
+
+  .direccion-button {
+    font-size: 5vw;
+    padding: 1vw 2vw;
+  }
+
+  .direccion-button svg {
+    width: 10vw;
   }
 
   .productos-container {
     grid-template-columns: 1fr;
     width: 95%;
+    gap: 4vw;
   }
 
   h1 {
@@ -1015,6 +1051,10 @@ body .disabled {
 
   .datos-title {
     font-size: 15vw;
+  }
+
+  .imagenProducto {
+    height: 100%;
   }
 
 }
