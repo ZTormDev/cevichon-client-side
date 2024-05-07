@@ -6,8 +6,8 @@ const productos = [
       tamaño: '300g', 
       imagen: '/ceviches/ceviche300g.png',
       descripcionCorta: 'Elige entre Camarón, Salmón o Macha.',
-      descripcion: 'Cevichon Macha, Camaron, Salmon, con maiz/choclo, pimenton verde y un poco de aji, mas unas 3 tostadas de oregano y mantequilla.',
-      precioAnterior: '$4.500',
+      descripcion: 'Elige tu Ceviche de Camarón, Salmón o Macha. Con base de Leche de trigre, cebolla morada, mix de pimientos, choclo y cilantro. Acompañado de 4 tostadas ajó, orégano + ají de cortesía.',
+      precioAnterior: '',
       precioActual: '$3.500',
       seleccion: 'si',
       tipoSeleccion: ['Camarón', 'Salmón', 'Macha'],
@@ -16,10 +16,10 @@ const productos = [
     {
       nombre: 'Cevichón',
       tamaño: '500g', 
-      imagen: '/ceviches/cevich.png',
+      imagen: '/ceviches/ceviche500g.png',
       descripcionCorta: 'Elige entre Camarón, Salmón o Macha.',
-      descripcion: 'Cevichon Macha, Camaron, Salmon, con maiz/choclo, pimenton verde y un poco de aji, mas unas 3 tostadas de oregano y mantequilla.',
-      precioAnterior: '$7.500',
+      descripcion: 'Elige tu Ceviche de Camarón, Salmón o Macha. Con base de Leche de trigre, cebolla morada, mix de pimientos, choclo y cilantro. Acompañado de 8 tostadas ajó, orégano + ají de cortesía.',
+      precioAnterior: '',
       precioActual: '$6.000',
       seleccion: 'si',
       tipoSeleccion: ['Camarón', 'Salmón', 'Macha'],
@@ -28,10 +28,10 @@ const productos = [
     {
       nombre: 'Cevichón',
       tamaño: '1kg', 
-      imagen: '/ceviches/ceviche.png',
+      imagen: '/ceviches/ceviche1kg.png',
       descripcionCorta: 'Elige entre Camarón, Salmón o Macha.',
-      descripcion: 'Cevichon Macha, Camaron, Salmon, con maiz/choclo, pimenton verde y un poco de aji, mas unas 3 tostadas de oregano y mantequilla.',
-      precioAnterior: '$11.500',
+      descripcion: 'Elige tu Ceviche de Camarón, Salmón o Macha. Con base de Leche de trigre, cebolla morada, mix de pimientos, choclo y cilantro. Acompañado de 12 tostadas ajó, orégano + ají de cortesía.',
+      precioAnterior: '',
       precioActual: '$10.500',
       seleccion: 'si',
       tipoSeleccion: ['Camarón', 'Salmón', 'Macha'],
@@ -45,8 +45,8 @@ const productos = [
       tamaño: '300g', 
       imagen: '/ceviches/ceviche300g-salmoncamaron.png',
       descripcionCorta: 'Camarón y Salmón.',
-      descripcion: 'Cevichon Macha, Camaron, Salmon, con maiz/choclo, pimenton verde y un poco de aji, mas unas 3 tostadas de oregano y mantequilla.',
-      precioAnterior: '$5.000',
+      descripcion: 'Ceviche de Salmón y Camarón con base de Leche de trigre, cebolla morada, mix de pimientos, choclo y cilantro. Acompañado de 4 tostadas ajó, orégano + ají de cortesía.',
+      precioAnterior: '',
       precioActual: '$4.000',
       cantidad: '1'
     },
@@ -55,8 +55,8 @@ const productos = [
       tamaño: '500g', 
       imagen: '/ceviches/ceviche500g-camaronsalmon.png',
       descripcionCorta: 'Camarón y Salmón.',
-      descripcion: 'Cevichon Macha, Camaron, Salmon, con maiz/choclo, pimenton verde y un poco de aji, mas unas 3 tostadas de oregano y mantequilla.',
-      precioAnterior: '$7.500',
+      descripcion: 'Ceviche de Salmón y Camarón con base de Leche de trigre, cebolla morada, mix de pimientos, choclo y cilantro. Acompañado de 8 tostadas ajó, orégano + ají de cortesía.',
+      precioAnterior: '',
       precioActual: '$6.500',
       cantidad: '1'
     },
@@ -65,8 +65,8 @@ const productos = [
       tamaño: '1kg', 
       imagen: '/ceviches/ceviche1kg-camaronsalmon.png',
       descripcionCorta: 'Camarón y Salmón.',
-      descripcion: 'Cevichon Macha, Camaron, Salmon, con maiz/choclo, pimenton verde y un poco de aji, mas unas 3 tostadas de oregano y mantequilla.',
-      precioAnterior: '$13.000',
+      descripcion: 'Ceviche de Salmón y Camarón con base de Leche de trigre, cebolla morada, mix de pimientos, choclo y cilantro. Acompañado de 12 tostadas ajó, orégano + ají de cortesía.',
+      precioAnterior: '',
       precioActual: '$12.000',
       cantidad: '1'
     },
@@ -78,8 +78,8 @@ const productos = [
       tamaño: '300g', 
       imagen: '/ceviches/ceviche300g-machasalmonomachacamaron.png',
       descripcionCorta: 'Elije entre Macha y Salmón o Macha y Camarón',
-      descripcion: 'Cevichon Macha, Camaron, Salmon, con maiz/choclo, pimenton verde y un poco de aji, mas unas 3 tostadas de oregano y mantequilla.',
-      precioAnterior: '$5.000',
+      descripcion: 'Elije entre Ceviche de Macha y Salmón o Macha y Camarón con base de Leche de trigre, cebolla morada, mix de pimientos, choclo y cilantro. Acompañado de 4 tostadas ajó, orégano + ají de cortesía.',
+      precioAnterior: '',
       precioActual: '$4.000',
       seleccion: 'si',
       tipoSeleccion: ['Macha y Salmon','Macha y Camaron'],
@@ -88,10 +88,10 @@ const productos = [
     {
       nombre: 'Cevichón',
       tamaño: '500g', 
-      imagen: '/ceviches/cevic.jpg',
+      imagen: '/ceviches/ceviche500g-machasalmonmachacamaron.png',
       descripcionCorta: 'Elije entre Macha y Salmón o Macha y Camarón',
-      descripcion: 'Cevichon Macha, Camaron, Salmon, con maiz/choclo, pimenton verde y un poco de aji, mas unas 3 tostadas de oregano y mantequilla.',
-      precioAnterior: '$7.500',
+      descripcion: 'Elije entre Ceviche de Macha y Salmón o Macha y Camarón con base de Leche de trigre, cebolla morada, mix de pimientos, choclo y cilantro. Acompañado de 8 tostadas ajó, orégano + ají de cortesía.',
+      precioAnterior: '',
       precioActual: '$6.500',
       seleccion: 'si',
       tipoSeleccion: ['Macha y Salmon','Macha y Camaron'],
@@ -100,10 +100,10 @@ const productos = [
     {
       nombre: 'Cevichón',
       tamaño: '1kg', 
-      imagen: '/ceviches/cevich.png',
+      imagen: '/ceviches/ceviche1kg-machasalmonomachacamaron.png',
       descripcionCorta: 'Elije entre Macha y Salmón o Macha y Camarón',
-      descripcion: 'Cevichon Macha, Camaron, Salmon, con maiz/choclo, pimenton verde y un poco de aji, mas unas 3 tostadas de oregano y mantequilla.',
-      precioAnterior: '$13.000',
+      descripcion: 'Elije entre Ceviche de Macha y Salmón o Macha y Camarón con base de Leche de trigre, cebolla morada, mix de pimientos, choclo y cilantro. Acompañado de 12 tostadas ajó, orégano + ají de cortesía.',
+      precioAnterior: '',
       precioActual: '$12.000',
       seleccion: 'si',
       tipoSeleccion: ['Macha y Salmon','Macha y Camaron'],
@@ -117,8 +117,8 @@ const productos = [
       tamaño: '300g', 
       imagen: '/ceviches/ceviche300g-trilogiamarina.png',
       descripcionCorta: 'Salmon, Camaron y Macha',
-      descripcion: 'Cevichon Macha, Camaron, Salmon, con maiz/choclo, pimenton verde y un poco de aji, mas unas 3 tostadas de oregano y mantequilla.',
-      precioAnterior: '$5.500',
+      descripcion: 'Trilogía de Salmón, Machas y Camarón con base de Leche de tigre, cebolla morada, mix de  pimientos,choclo y cilantro. Acompañado de 4 tostadas ajó, orégano + ají de cortesía',
+      precioAnterior: '',
       precioActual: '$4.500',
       cantidad: '1'
     },
@@ -127,8 +127,8 @@ const productos = [
         tamaño: '500g', 
         imagen: '/ceviches/ceviche500g-trilogiamarina.png',
         descripcionCorta: 'Salmon, Camaron y Macha',
-        descripcion: 'Cevichon Macha, Camaron, Salmon, con maiz/choclo, pimenton verde y un poco de aji, mas unas 3 tostadas de oregano y mantequilla.',
-        precioAnterior: '$8.500',
+        descripcion: 'Trilogía de Salmón, Machas y Camarón con base de Leche de tigre, cebolla morada, mix de  pimientos,choclo y cilantro. Acompañado de 8 tostadas ajó, orégano + ají de cortesía',
+        precioAnterior: '',
         precioActual: '$7.500',
         cantidad: '1'
     },
@@ -137,8 +137,8 @@ const productos = [
       tamaño: '1kg', 
       imagen: '/ceviches/ceviche1kg-trilogiamarina.png',
       descripcionCorta: 'Salmon, Camaron y Macha',
-      descripcion: 'Cevichon Macha, Camaron, Salmon, con maiz/choclo, pimenton verde y un poco de aji, mas unas 3 tostadas de oregano y mantequilla.',
-      precioAnterior: '$14.000',
+      descripcion: 'Trilogía de Salmón, Machas y Camarón con base de Leche de tigre, cebolla morada, mix de  pimientos,choclo y cilantro. Acompañado de 12 tostadas ajó, orégano + ají de cortesía',
+      precioAnterior: '',
       precioActual: '$13.000',
       cantidad: '1'
     },
@@ -152,7 +152,7 @@ const productos = [
       imagen: '/agregados/tostadas.png',
       descripcionCorta: 'Tostadas de oregano y mantequilla',
       descripcion: 'Tostaditas cubiertas con mantequilla y un liguero toque de oregano lo cual es conveniente con un buen ceviche.',
-      precioAnterior: '$2.000',
+      precioAnterior: '',
       precioActual: '$1.000',
       cantidad: '1'
     },
@@ -161,8 +161,8 @@ const productos = [
       tamaño: '1 uds', 
       imagen: '/agregados/salsadeajo.png',
       descripcionCorta: 'Deliciosa lactonesa echa a base leche..',
-      descripcion: 'Deliciosa lactonesa echa a base leche, ajo, aceite, limón, sal y cilantro, acompañado de la magia de la casa.',
-      precioAnterior: '$1.000',
+      descripcion: 'Deliciosa lactonesa hecha a base de leche, ajo, aceite, limón, sal y cilantro, acompañado de la magia de la casa.',
+      precioAnterior: '',
       precioActual: '$500',
       cantidad: '1'
     },
@@ -286,6 +286,9 @@ function generarProductos() {
     productPreviewDetails.innerHTML = producto.descripcion;
     productPreviewPriceAnterior.innerHTML = producto.precioAnterior;
     productPreviewPrice.innerHTML = producto.precioActual;
+    const bodyhtml = document.querySelector('html');
+
+    bodyhtml.style.overflowY = 'hidden';
 
     const datosGuardados = localStorage.getItem('datosCliente');
     const datos = JSON.parse(datosGuardados);
@@ -366,6 +369,9 @@ function generarProductos() {
   function closeItemPreview() {
     ItemPreviewContainer.classList.add('hidden');
     ItemPreview.classList.remove('enterAnimation')
+    const bodyhtml = document.querySelector('html');
+
+    bodyhtml.style.overflowY = 'auto';
   }
 
 
