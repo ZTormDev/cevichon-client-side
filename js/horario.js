@@ -4,7 +4,7 @@ const horarios = [
     { dia: 2, abre: false, horaApertura: 0, horaCierre: 0 }, // Martes
     { dia: 3, abre: false, horaApertura: 0, horaCierre: 0 }, // Miércoles
     { dia: 4, abre: false, horaApertura: 0, horaCierre: 0 }, // Jueves
-    { dia: 5, abre: true, horaApertura: 21, horaCierre: 1 }, // Viernes
+    { dia: 5, abre: true, horaApertura: 21, horaCierre: 24 }, // Viernes
     { dia: 6, abre: true, horaApertura: 10, horaCierre: 24 }, // Sábado
 ];
 
@@ -54,5 +54,5 @@ function revisarHorarioDisponible() {
     alerta.classList.add("mostrar-alerta");
     setTimeout(() => {
         alerta.classList.remove("mostrar-alerta");
-    }, 8000);
+    }, 5000);
 }
