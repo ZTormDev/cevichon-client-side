@@ -8,7 +8,7 @@ const productos = [
       descripcionCorta: 'Elige entre Camarón, Salmón o Macha.',
       descripcion: 'Elige tu Ceviche de Camarón, Salmón o Macha. Con base de Leche de trigre, cebolla morada, mix de pimientos, choclo y cilantro.<br><br>Acompañado de 4 tostadas ajó, orégano + ají de cortesía.',
       precioAnterior: '',
-      precioActual: '$3.500',
+      precioActual: '$4.000',
       seleccion: 'si',
       tipoSeleccion: ['Camarón', 'Salmón', 'Macha'],
       cantidad: '1'
@@ -20,7 +20,7 @@ const productos = [
       descripcionCorta: 'Elige entre Camarón, Salmón o Macha.',
       descripcion: 'Elige tu Ceviche de Camarón, Salmón o Macha. Con base de Leche de trigre, cebolla morada, mix de pimientos, choclo y cilantro.<br><br>Acompañado de 8 tostadas ajó, orégano + ají de cortesía.',
       precioAnterior: '',
-      precioActual: '$6.000',
+      precioActual: '$7.000',
       seleccion: 'si',
       tipoSeleccion: ['Camarón', 'Salmón', 'Macha'],
       cantidad: '1'
@@ -32,7 +32,7 @@ const productos = [
       descripcionCorta: 'Elige entre Camarón, Salmón o Macha.',
       descripcion: 'Elige tu Ceviche de Camarón, Salmón o Macha. Con base de Leche de trigre, cebolla morada, mix de pimientos, choclo y cilantro.<br><br>Acompañado de 12 tostadas ajó, orégano + ají de cortesía.',
       precioAnterior: '',
-      precioActual: '$10.500',
+      precioActual: '$12.000',
       seleccion: 'si',
       tipoSeleccion: ['Camarón', 'Salmón', 'Macha'],
       cantidad: '1'
@@ -47,7 +47,7 @@ const productos = [
       descripcionCorta: 'Camarón y Salmón.',
       descripcion: 'Ceviche de Salmón y Camarón con base de Leche de trigre, cebolla morada, mix de pimientos, choclo y cilantro.<br><br>Acompañado de 4 tostadas ajó, orégano + ají de cortesía.',
       precioAnterior: '',
-      precioActual: '$4.000',
+      precioActual: '$4.500',
       cantidad: '1'
     },
     {
@@ -57,7 +57,7 @@ const productos = [
       descripcionCorta: 'Camarón y Salmón.',
       descripcion: 'Ceviche de Salmón y Camarón con base de Leche de trigre, cebolla morada, mix de pimientos, choclo y cilantro.<br><br>Acompañado de 8 tostadas ajó, orégano + ají de cortesía.',
       precioAnterior: '',
-      precioActual: '$6.500',
+      precioActual: '$7.500',
       cantidad: '1'
     },
     {
@@ -67,7 +67,7 @@ const productos = [
       descripcionCorta: 'Camarón y Salmón.',
       descripcion: 'Ceviche de Salmón y Camarón con base de Leche de trigre, cebolla morada, mix de pimientos, choclo y cilantro.<br><br>Acompañado de 12 tostadas ajó, orégano + ají de cortesía.',
       precioAnterior: '',
-      precioActual: '$12.000',
+      precioActual: '$13.000',
       cantidad: '1'
     },
 
@@ -80,7 +80,7 @@ const productos = [
       descripcionCorta: 'Ceviche Macha y Salmón',
       descripcion: 'Ceviche de Macha y Salmón con base de Leche de trigre, cebolla morada, mix de pimientos, choclo y cilantro.<br><br>Acompañado de 4 tostadas ajó, orégano + ají de cortesía.',
       precioAnterior: '',
-      precioActual: '$4.000',
+      precioActual: '$4.500',
       cantidad: '1'
     },
     {
@@ -90,7 +90,7 @@ const productos = [
       descripcionCorta: 'Ceviche Macha y Salmón',
       descripcion: 'Ceviche de Macha y Salmón con base de Leche de trigre, cebolla morada, mix de pimientos, choclo y cilantro.<br><br>Acompañado de 8 tostadas ajó, orégano + ají de cortesía.',
       precioAnterior: '',
-      precioActual: '$6.500',
+      precioActual: '$7.500',
       cantidad: '1'
     },
     {
@@ -100,7 +100,7 @@ const productos = [
       descripcionCorta: 'Ceviche Macha y Salmón',
       descripcion: 'Ceviche de Macha y Salmón con base de Leche de trigre, cebolla morada, mix de pimientos, choclo y cilantro.<br><br>Acompañado de 12 tostadas ajó, orégano + ají de cortesía.',
       precioAnterior: '',
-      precioActual: '$12.000',
+      precioActual: '$13.000',
       cantidad: '1'
     },
 
@@ -112,7 +112,7 @@ const productos = [
       descripcionCorta: 'Ceviche Macha y Camarón',
       descripcion: 'Ceviche de Macha y Camarón con base de Leche de trigre, cebolla morada, mix de pimientos, choclo y cilantro.<br><br>Acompañado de 4 tostadas ajó, orégano + ají de cortesía.',
       precioAnterior: '',
-      precioActual: '$4.000',
+      precioActual: '$4.500',
       cantidad: '1'
     },
     {
@@ -122,7 +122,7 @@ const productos = [
       descripcionCorta: 'Ceviche Macha y Camarón',
       descripcion: 'Ceviche de Macha y Camarón con base de Leche de trigre, cebolla morada, mix de pimientos, choclo y cilantro.<br><br>Acompañado de 8 tostadas ajó, orégano + ají de cortesía.',
       precioAnterior: '',
-      precioActual: '$6.500',
+      precioActual: '$7.500',
       cantidad: '1'
     },
     {
@@ -132,7 +132,7 @@ const productos = [
       descripcionCorta: 'Ceviche Macha y Camarón',
       descripcion: 'Ceviche de Macha y Camarón con base de Leche de trigre, cebolla morada, mix de pimientos, choclo y cilantro.<br><br>Acompañado de 12 tostadas ajó, orégano + ají de cortesía.',
       precioAnterior: '',
-      precioActual: '$12.000',
+      precioActual: '$13.000',
       cantidad: '1'
     },
 
@@ -144,7 +144,7 @@ const productos = [
       descripcionCorta: 'Salmon, Camaron y Macha',
       descripcion: 'Trilogía de Salmón, Machas y Camarón con base de Leche de tigre, cebolla morada, mix de pimientos,choclo y cilantro.<br><br>Acompañado de 4 tostadas ajó, orégano + ají de cortesía',
       precioAnterior: '',
-      precioActual: '$4.500',
+      precioActual: '$5.000',
       cantidad: '1'
     },
     {
@@ -154,7 +154,7 @@ const productos = [
         descripcionCorta: 'Salmon, Camaron y Macha',
         descripcion: 'Trilogía de Salmón, Machas y Camarón con base de Leche de tigre, cebolla morada, mix de pimientos,choclo y cilantro.<br><br>Acompañado de 8 tostadas ajó, orégano + ají de cortesía',
         precioAnterior: '',
-        precioActual: '$7.500',
+        precioActual: '$8.500',
         cantidad: '1'
     },
     {
@@ -164,7 +164,7 @@ const productos = [
       descripcionCorta: 'Salmon, Camaron y Macha',
       descripcion: 'Trilogía de Salmón, Machas y Camarón con base de Leche de tigre, cebolla morada, mix de pimientos,choclo y cilantro.<br><br>Acompañado de 12 tostadas ajó, orégano + ají de cortesía',
       precioAnterior: '',
-      precioActual: '$13.000',
+      precioActual: '$14.000',
       cantidad: '1'
     },
 
